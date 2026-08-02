@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: probed
+source: dig + TLS/HTTP HEAD probe of tutorabc.com hosts
+hosts:
+  - host: www.tutorabc.com
+    https: true
+    tls_version: TLSv1.3
+    cert_valid: true
+    hsts: true
+    hsts_max_age: 157670188
+domains:
+  - domain: tutorabc.com
+    dnssec: false
+    caa: []
+    spf: true
+    spf_record: "v=spf1 mx mx:spam.tutorabc.com ip4:60.251.28.84 ip4:60.251.28.85 ip4:210.242.31.58 ip4:61.219.187.0/24 ip4:211.72.13.0/24 ip4:60.251.53.0/24 ip4:60.251.28.0/24 ip4:152.101.54.122 -all"
+    dmarc: true
+    dmarc_policy: none
+notes: >-
+  The apis.yml Website host tutorabc.com.cn does not resolve; the live consumer
+  platform is served from www.tutorabc.com (redirects to /site/zh-tw). Probe run
+  against the resolving production host.

@@ -1,7 +1,28 @@
 aid: tutorabc
-name: tutorabc
-description: tutorabc is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tutorabc.png
+name: TutorABC
+description: >-
+  TutorABC (formerly iTutorGroup) is a Taiwan-headquartered online language-learning
+  platform offering live one-on-one and small-group English and Chinese instruction to
+  learners worldwide. Courses span conversational and business English, Mandarin Chinese,
+  certification-exam prep, and study-abroad advising, delivered through a proprietary web
+  and mobile classroom with matched tutors and partnerships with institutions such as
+  Oxford and Cambridge. The company runs consumer learning sites alongside separate portals
+  for tutor recruitment, learning consultants, and interviewer/onboarding workflows. TutorABC
+  is a portfolio company of Qiming Venture Partners. It publishes no public developer API;
+  this profile captures the company identity, its agent-facing llms.txt, and its domain-security
+  posture surfaced by the enrichment pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/tutorabc/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Education
+- Online Learning
+- Language Learning
+- EdTech
+- E-Learning
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +49,21 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://tutorabc.com.cn
+  url: https://www.tutorabc.com/site/zh-tw
+- type: Blog
+  url: https://www.tutorabc.com/blog/
+- type: HelpCenter
+  url: https://faq.tutorabc.com/
+- type: SignUp
+  url: https://www.tutorabc.com/site/zh-hk
+- type: LLMsTxt
+  url: llms/tutorabc-llms.txt
+- type: WellKnown
+  url: well-known/tutorabc-well-known.yml
+- type: DomainSecurity
+  url: security/tutorabc-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
