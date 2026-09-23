@@ -2,7 +2,12 @@ generated: '2026-07-21'
 method: probed
 source: HTTP probe of https://www.tutorabc.com
 host: https://www.tutorabc.com
-documents:
+notes: No machine-readable discovery surface (no OIDC/OAuth metadata, no API catalog, no security.txt).
+  TutorABC is a consumer online-learning platform with no public developer API; the only agent-facing
+  document is the site llms.txt.
+hosts:
+- host: https://www.tutorabc.com
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -13,13 +18,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-  - path: /llms.txt
-    status: 200
-    file: ../llms/tutorabc-llms.txt
-    note: >-
-      Not a /.well-known/ path, but a real 200 was returned and saved verbatim as
-      the LLMsTxt artifact. UTF-16 Chinese-language site resource summary.
-notes: >-
-  No machine-readable discovery surface (no OIDC/OAuth metadata, no API catalog,
-  no security.txt). TutorABC is a consumer online-learning platform with no public
-  developer API; the only agent-facing document is the site llms.txt.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
